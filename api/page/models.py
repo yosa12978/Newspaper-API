@@ -1,3 +1,11 @@
 from django.db import models
 
-# Create your models here.
+class NP(models.Model):
+    Title = models.CharField(max_length = 50)
+    Company = models.CharField(max_length = 50, default = "Unknown")
+    Newspaper = models.FileField(upload_to = '../media/')
+    Year = models.IntegerField(default=None)
+    User = models.CharField(max_length = 100)
+
+    def __str__(self):
+        return "{} - {} - {}".format(self.Title, self.Company, self.Year)

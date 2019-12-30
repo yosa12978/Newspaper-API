@@ -1,3 +1,4 @@
 from django.contrib import admin
+from .models import NP
 
-# Register your models here.
+admin.site.register(NP)
