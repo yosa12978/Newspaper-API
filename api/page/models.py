@@ -1,7 +1,7 @@
 from django.db import models
 
 class NP(models.Model):
-    Title = models.CharField(max_length = 50)
+    Title = models.CharField(max_length = 120)
     Company = models.CharField(max_length = 50, default = "Unknown")
     Newspaper = models.FileField(upload_to = '../media/')
     Year = models.IntegerField(default=None)
